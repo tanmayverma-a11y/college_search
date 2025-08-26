@@ -1,18 +1,16 @@
 import streamlit as st
 import pandas as pd
 
-# Upload CSV file
 st.title("College Finder")
-
 
 df = pd.read_csv("data.csv")
 
+# --- Select column to search ---
+# Force "College Name" to be the default if it exists, otherwise fallback to first column
+default_index = df.columns.get_loc("College Name") if "College Name" in df.columns else 0
+column = st.selectbox("Select column to search", df.columns, index=default_index)
 
-
-    # Select column to search
-column = st.selectbox("Select column to search", df.columns)
-
-    # Search query
+# --- Search query ---
 query = st.text_input(f"Search by {column}")
 
 if query:
@@ -20,7 +18,6 @@ if query:
     st.write(f"Found {len(results)} matches")
     st.dataframe(results)
 
-
-    # Preview table
+# --- Preview table ---
 st.subheader("Complete List of Colleges")
 st.dataframe(df)
