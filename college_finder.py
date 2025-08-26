@@ -1,7 +1,19 @@
 import streamlit as st
 import pandas as pd
+from PIL import Image
 
-st.title("College Finder")
+
+st.markdown(
+    """
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h1 style="margin:0;">College Finder</h1>
+        <img src="logo.png" width="100">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
 df = pd.read_csv("data.csv")
 
