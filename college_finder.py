@@ -5,7 +5,7 @@ import pandas as pd
 st.title("College Finder")
 
 
-df = pd.read_csv(r"c:\Users\tanma\Downloads\data-1755675404346 (1).csv")
+df = pd.read_csv("data.csv")
 
 
 
