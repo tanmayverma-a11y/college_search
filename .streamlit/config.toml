@@ -1,0 +1,7 @@
+[theme]
+base="light"               # or "dark"
+primaryColor="#2E86C1"     # button / highlight color
+backgroundColor="#FDFEFE"  # main background
+secondaryBackgroundColor="#EAF2F8"  # sidebar background
+textColor="#1B2631"        # text color
+font="sans serif"          # or "serif", "monospace"
